@@ -1,0 +1,86 @@
+CREA UN TACO
+POST: Los ingredients, deben existir en la BD
+http://localhost:9090/api/tacos
+
+{
+    "id": 74,
+    "name": "Vegan-Out",
+    "ingredients": [
+        {
+            "id": "LETC",
+            "name": "Lettuce",
+            "type": "VEGGIES"
+        },
+        {
+            "id": "QUEZ",
+            "name": "Salsa Tipo Queso",
+            "type": "SAUCE"
+        }
+    ]
+}
+
+CREA UNA ORDEN
+POST: Los tacos, ID's deben existir en la BD
+http://localhost:9090/api/orders
+{
+    "deliveryName": "Envio en avion",
+    "deliveryStreet": "IRPAVI 6",
+    "deliveryCity": "LA PAZ",
+    "deliveryState": "POR ENTREGAR",
+    "deliveryZip": "789",
+    "ccNumber": "4548812049400004",
+    "ccExpiration": "08/23",
+    "ccCVV": "669",
+    "tacos": [
+        {
+            "id": 102
+        },
+        {
+            "id": 54
+        }
+    ]
+}
+
+ACTUALIZA UNA ORDEN
+PUT: Enviar el ID de la orden y Los tacos, ID's deben existir en la BD
+http://localhost:9090/api/orders/205
+
+{
+    "deliveryName": "Envio en avion modificado",
+    "deliveryStreet": "IRPAVI CAMBIO",
+    "deliveryCity": "LA PAZ",
+    "deliveryState": "POR ENTREGAR Y/O ESPERAR",
+    "deliveryZip": "789",
+    "ccNumber": "4548812049400004",
+    "ccExpiration": "08/23",
+    "ccCVV": "669",
+    "tacos": [
+        {
+            "id": 302
+        },
+        {
+            "id": 303
+        }
+    ]
+}
+
+PARA ACTUALIZAR UNA ORDEN SOLO ALGUNOS ATRIBUTOS
+PATCH:
+http://localhost:9090/api/orders/205
+
+{
+    "deliveryName": "Envio en avion usando PatchMapping",
+    "deliveryCity": "LA PAZ - como pues asi nomas"
+}
+
+
+
+
+
+
+
+
+GET: Llamada con la configuracion del proyecto normal
+http://localhost:9090/api/orders
+GET: Llamada con el GW
+http://localhost:8080/api/orders

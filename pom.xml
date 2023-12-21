@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- # Agrega la dependencia "spring-boot-starter-parent", esto indica que este proyecto es un hijo de Spring Boot -->
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.0</version>
+	</parent>
+
+	<!-- # Define el artefacto del proyecto -->
+
+	<groupId>gob.bo.segip.proyecto</groupId>
+	<artifactId>proyecto-valores-suministros</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<!-- # Define el detalle del proyecto -->
+
+	<name>proyecto-valores-suministros</name>
+	<description>Proyecto Valores y Suministros</description>
+
+	<!-- # Define el empaquetado del proyecto en múltiples módulos hijo -->
+
+	<packaging>pom</packaging>
+
+	<!-- # Agrega los "modulos hijo" al proyecto root -->
+
+	<modules>
+		<module>puerta-de-enlace</module>
+		<module>servidor-eureka</module>
+		<module>servidor-de-configuracion</module>
+		<module>modulo-parametricas</module>
+	</modules>
+
+	<!-- # Define las "propiedades" al proyecto root -->
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+
+	<!-- # Agrega las dependencias del proyecto padre -->
+
+	<dependencies>
+
+	</dependencies>
+
+	<!-- # Agrega la dependencia "spring-boot-maven-plugin" al proyecto -->
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>16</source>
+					<target>16</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>16</source>
+					<target>16</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>16</source>
+					<target>16</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>16</source>
+					<target>16</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>16</source>
+					<target>16</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
